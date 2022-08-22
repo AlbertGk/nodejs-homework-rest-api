@@ -44,6 +44,7 @@ const removeContact = async (contactId) => {
   const updatedContacts = data.filter((el) => el.id !== contactId);
   await updateContactsFile(updatedContacts);
 
+  return deletedContacts;
 };
 
 
