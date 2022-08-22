@@ -46,7 +46,7 @@ router.post("/", async (req, res, next) => {
   try {
     const { error } = contactSchema.validate(req.body);
     if (error) {
-      res.status(400).json({ message: result.error.message });
+      res.status(400).json({ message: error.message });
     } else {
       const result = await addContact(name, email, phone);
       res.json(result);
@@ -63,7 +63,7 @@ router.delete("/:id", async (req, res, next) => {
     if (!result) {
       res.status(404).json({ message: "Not found" });
     } else {
-      res.json(result);
+      res.status(204).json({ message: "User deleted" });
     }
   } catch (error) {
     next(error);

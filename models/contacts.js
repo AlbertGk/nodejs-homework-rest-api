@@ -26,15 +26,15 @@ const getContactById = async (contactId) => {
 
 const addContact = async (name, email, phone) => {
   const data = await listContacts();
-  const addedContact = {
+  const contactToAdd = {
     id: nanoid(),
     name,
     email,
     phone,
   };
-  data.push(addedContact);
+  data.push(contactToAdd);
   await updateContactsFile(data);
-  return addedContact;
+  return contactToAdd;
 };
 
 
@@ -44,7 +44,6 @@ const removeContact = async (contactId) => {
   const updatedContacts = data.filter((el) => el.id !== contactId);
   await updateContactsFile(updatedContacts);
 
-  return deletedContacts;
 };
 
 
