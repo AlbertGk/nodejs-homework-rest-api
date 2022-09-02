@@ -1,5 +1,5 @@
 // const { basedir } = global;
-const { Contact, schemas } = require("../../models/contacts");
+const { Contact, schemas } = require("../../models/contact");
 
 const updateStatusContact = async (req, res) => {
   const { error } = schemas.updateStatusContact.validate(req.body);

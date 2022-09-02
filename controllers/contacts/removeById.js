@@ -1,5 +1,5 @@
 // const { basedir } = global;
-const { Contact } = require("../../models/contacts");
+const { Contact } = require("../../models/contact");
 
 const removeById = async (req, res) => {
   const { id } = req.params;
