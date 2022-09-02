@@ -1,4 +1,3 @@
-// const { basedir } = global;
 const { Contact } = require("../../models/contact");
 
 const removeById = async (req, res) => {

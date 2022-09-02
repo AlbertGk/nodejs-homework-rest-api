@@ -1,4 +1,3 @@
-// const { basedir } = global;
 const { Contact, schemas } = require("../../models/contact");
 
 const updateById = async (req, res) => {
