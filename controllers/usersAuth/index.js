@@ -3,6 +3,8 @@ const login = require("./login");
 const logout = require("./logout");
 const listCurrent = require("./listCurrent");
 const setAvatar = require("./setAvatar");
+const verifyEmail = require("./verifyEmail");
+const resendVerifyEmail = require("./resendVerifyEmail");
 
 
 module.exports = {
@@ -11,4 +13,6 @@ module.exports = {
   logout,
   listCurrent,
   setAvatar,
+  verifyEmail,
+  resendVerifyEmail,
 };
